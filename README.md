@@ -1,6 +1,6 @@
 
 Available via [clojars](http://clojars.org/into-edn),  
-Current stable version: [into-edn "1.0.1"]
+Current stable version: [into-edn "1.0.2"]
 [![Build Status](https://api.travis-ci.org/thebusby/into-edn.png?branch=master)](https://travis-ci.org/thebusby/into-edn)
 
 
@@ -9,7 +9,7 @@ Current stable version: [into-edn "1.0.1"]
 into-edn is a Clojure library to simplify the conversion of data from one format, into Clojure EDN. It does not handle the reading or parsing of data, but instead provides a standard method for defining the EDN format as well as how to generate it.
  
 Why write this library?  
-For too often when dealing with XML, Java objects, etc; I end up converting them to a Clojure map. +into-edn+ simplifies, and standardizes, that process across libraries.
+Far too often when dealing with XML, Java objects, etc; I end up converting them to a Clojure map. This was written to simplify and standardize that process across libraries.
 
 
 ## Usage
@@ -85,7 +85,7 @@ For too often when dealing with XML, Java objects, etc; I end up converting them
 
 ## Artifacts
 
-+into-edn+ artifacts are [released to Clojars](https://clojars.org/into-edn).
+into-edn artifacts are [released to Clojars](https://clojars.org/into-edn).
 
 If you are using Maven, add the following repository definition to your `pom.xml`:
 
@@ -100,7 +100,7 @@ If you are using Maven, add the following repository definition to your `pom.xml
 
 With Leiningen:
 ```clojure
-    [into-edn "1.0.1"]
+    [into-edn "1.0.2"]
 ```
 
 With Maven:
@@ -108,7 +108,7 @@ With Maven:
     <dependency>
       <groupId>into-edn</groupId>
       <artifactId>into-edn</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
 ```
 

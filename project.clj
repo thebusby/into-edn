@@ -1,4 +1,4 @@
-(defproject into-edn "1.0.1"
+(defproject into-edn "1.0.2"
   :description  "A simple library to convert an Object/Document/etc into Clojure EDN data "
   :url          "https://github.com/thebusby/into-edn"
   :license      {:name "MIT"
