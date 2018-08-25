@@ -42,7 +42,7 @@ Far too often when dealing with XML, Java objects, etc; I end up converting them
 
 (def xml-string "
 <responses>
-  <response status=\"okay\">
+  <response status=\"okay\" code=\"200\">
     <ident>1234</ident>
     <title lang=\"English\">Creativity fails me</title>
     <children>
@@ -55,7 +55,7 @@ Far too often when dealing with XML, Java objects, etc; I end up converting them
 
 (def xml-spec
   [#(zf/xml-> % :response)
-   {:status #(zf/xml1-> % (zf/attr :status))
+   {:into-edn/into #(some-> % (zf/xml1-> zip/node) :attrs)
     :ident  #(some-> %
                      (zf/xml1-> :ident zf/text)
                      (Long/parseLong))
@@ -73,6 +73,7 @@ Far too often when dealing with XML, Java objects, etc; I end up converting them
                            zip/xml-zip))
 ;; -->
 [{:status "okay",
+  :code "200",
   :ident 1234,
   :title "Creativity fails me",
   :title-lang "English",
@@ -118,5 +119,4 @@ With Maven:
 MIT
 http://opensource.org/licenses/MIT
 
-Copyright © 2013 Alan Busby
-
+Copyright © 2013 Alan Busby, 2018 Francois Rey
